@@ -50,6 +50,9 @@
   height: 3px;
   background: #000000;
   left: 5px;
+
+  transition: all 0.5s;
+
 }
 
 .nav-burger__btn span:nth-child(1){
@@ -136,6 +139,10 @@
     }
     .btnLogin{
       display: none;
+
+      @media (max-width: 500px) {
+        display: block;
+      }
     }
   }
   
@@ -200,14 +207,13 @@
   transition: all 0.5s;
 
   &:hover{
-    background: #000000;
+    background: #028383;
   }
 
 }
 
 .btn-login{
 
-  background: transparent;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
@@ -217,13 +223,17 @@
   align-items: center;
   text-align: center;
 
+
+  transition: all 0.3s;
+
   color: #FFFFFF;
+  background: #939393;
 
   padding: 10px 8px;
   border-radius: 3px;
 
   &:hover{
-    background: #000;
+    background: #d3d3d3;
   }
 
 }
@@ -242,23 +252,85 @@
 }
 
 .modalLogin{
-  width: 300px;
-  height: 300px;
-  background: #ff0000;
-  position: absolute;
   display: none;
 }
+
+.form input{
+  display: block;
+
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #000;
+
+  margin-bottom: 10px;
+
+  color: white;
+
+  @media (max-width: 700px) {
+    width: 300px;
+  }
+
+}
+
+
+.form__title{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 
 .modalLogin.open{
   display: block;
 }
 
 .modal{
-  width: 300px;
-  height: 300px;
-  background: #000;
-  position: absolute;
   display: none;
+}
+
+.modal__title{
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.modal__inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 33;
+}
+
+.modal__content{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  background: #ffffff;
+
+  height: 300px;
+  margin-top: 300px;
+
+  border-radius: 10px;
+
+  padding: 40px;
+
+  margin-left: 10px;
+  margin-right: 20px;
+
+  @media (max-width: 600px) {
+    &{
+      width: 90%;
+      margin-top: 150px;
+    }
+  }
+
 }
 
 .modal.open{
@@ -267,15 +339,45 @@
 
 
 .learnModal{
-  width: 300px;
-  height: 300px;
-  background: #000bff;
-  position: absolute;
   display: none;
 }
 
+.learn__content-title{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.learn__content-subtitle{
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+  width: 600px;
+
+
+  @media (max-width: 700px) {
+    &{
+      width: 250px;
+    }
+  }
+
+}
+
+
 .learnModal.open{
   display: block;
+}
+
+.closeBtn{
+  display: flex;
+  justify-content: center;
+}
+
+.close{
+  margin-top: 30px;
+  color: white;
+  background: #4545f1;
+  padding: 10px 30px;
+  border-radius: 10px;
 }
 
 .landing-content {
@@ -351,20 +453,25 @@
 
 }
 
-.btn-left {
+.btn-contact__main {
   background: #00C1C1;
   border-radius: 2.83333px;
   padding: 8px 30px;
 
   transition: all 0.5s;
 
+
   &:hover{
-    background: #000;
+    background: #028383;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 
 }
 
-.btn-right {
+.btn-learn__main {
   background: transparent;
   border: 1px solid #FFFFFF;
   border-radius: 2.83333px;
@@ -376,8 +483,10 @@
     background: rgba(86, 86, 86, 0.48);
   }
 
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
-
 
 .right-colum {
 }
@@ -880,6 +989,8 @@
 .menus-footer {
   display: flex;
   justify-content: space-between;
+
+  cursor: default;
 
   @media (max-width: 999px) {
     &{

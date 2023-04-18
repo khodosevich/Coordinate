@@ -18,6 +18,56 @@
 <body>
     <div class="wrapper">
             <div class="bg-blue">
+                <div id="modal" class="modal">
+                    <div class="modal__inner">
+                        <div class="container">
+                            <div class="modal__content">
+                                <h3 class="modal__title">Contacts us</h3>
+                                <p>+375 (44) 99-999-11</p>
+
+                                <div class="closeBtn">
+                                     <button class="close" id="close">close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modalLogin">
+                    <div class="modal__inner">
+                        <div class="container">
+                            <div class="modal__content">
+                                <div class="form">
+                                    <h4 class="form__title">Your data:</h4>
+                                    <form action="">
+                                        <input placeholder="Email" type="email" name="mail" >
+                                        <input placeholder="Password"  type="password" >
+                                    </form>
+                                </div>
+                                <div class="closeBtn">
+                                    <button class="close" id="loginClose">close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="learn" class="learnModal">
+                    <div class="modal__inner">
+                        <div class="container">
+                            <div class="modal__content">
+                                <div class="learn__content">
+                                    <h3 class="learn__content-title">Hello,we provide learning!</h3>
+                                    <p class="learn__content-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio fugiat ratione sapiente sint voluptatibus! Accusamus, dignissimos eveniet molestias neque officiis repellendus veritatis? Corporis debitis nesciunt nulla placeat saepe, sunt.</p>
+                                </div>
+                                <div class="closeBtn">
+                                     <button class="close" id="learnClose">close</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
                 <div class="container">
                     <header class="header">
                         <div id="navbar" class="navbar">
@@ -32,19 +82,19 @@
                             <div class="navbar-menu">
                                 <ul class="navbar-menu__container">
                                     <li class="navbar-menu__item">
-                                        <a href="#product">Product</a>
+                                        <a class="menu__link" href="#product">Product</a>
                                     </li>
                                     <li class="navbar-menu__item">
-                                        <a href="#customer">Customers</a>
+                                        <a class="menu__link" href="#customer">Customers</a>
                                     </li>
                                     <li class="navbar-menu__item">
-                                        <a href="#">Resources</a>
+                                        <a class="menu__link" href="#resources">Resources</a>
                                     </li>
                                     <li class="navbar-menu__item">
-                                        <a href="#">Company</a>
+                                        <a class="menu__link" href="#market">Marketing</a>
                                     </li>
                                     <li class="navbar-menu__item btnContact">
-                                        <button  class="btn-contact contact-us">Contacts us</button>
+                                        <button class="btn-contact contact-us">Contacts us</button>
                                     </li>
                                     <li class="navbar-menu__item btnLogin">
                                         <button id="login" class="btn-login">Login</button>
@@ -54,17 +104,6 @@
                         </div>
                     </header>
                 <main class="main">
-                    <div  class="modalLogin">
-                        <button id="loginClose">close</button>
-                    </div>
-                    <div id="modal" class="modal">
-                        hello
-                        <button id="close">close</button>
-                    </div>
-                    <div id="learn" class="learnModal">
-                        learn
-                        <button id="learnClose">close</button>
-                    </div>
                     <div class="landing-content">
                         <div class="left-colum">
                             <p class="undertitle">
@@ -78,10 +117,10 @@
                             </p>
                             <div class="btns-landing">
                                 <div class="btn-left">
-                                    <button id="contact-us" class="contact-us">CONTACT US</button>
+                                    <button id="contact-us" class="contact-us btn-contact__main">CONTACT US</button>
                                 </div>
                                 <div class="btn-right">
-                                    <button id="learnBtn">LEARN MORE</button>
+                                    <button id="learnBtn" class="btn-learn__main">LEARN MORE</button>
                                 </div>
                             </div>
                         </div>
@@ -222,6 +261,7 @@
             </div>
         </section>
         <section class="make-shift">
+            <a id="resources"></a>
             <div class="container">
                 <div class="make-shift__content">
                     <div class="make-shift__content__left">
@@ -240,6 +280,7 @@
         </section>
         <section class="marketing">
             <div class="container">
+                <a id="market"></a>
                 <div class="marketing-content">
                     <p class="marketing-content__undertitle">
                         BUILD SEAMLESS CUSTOMER EXPERIENCES

@@ -13,6 +13,12 @@ closeModal.addEventListener("click", function (){
 });
 
 
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById("modal").classList.remove("open");
+    }
+});
+
 
 //-----login-modal------------
 
@@ -25,6 +31,14 @@ loginModal.addEventListener("click", function (){
 
 loginClose.addEventListener("click", function (){
     document.querySelector(".modalLogin") .classList.remove('open');
+});
+
+
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelector(".modalLogin") .classList.remove('open');
+    }
 });
 
 //---------learn-modal----------------
@@ -40,3 +54,11 @@ learnModal.addEventListener("click", function (){
 learnClose.addEventListener("click", function (){
     document.querySelector(".learnModal") .classList.remove('open');
 });
+
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelector(".learnModal") .classList.remove('open');
+    }
+});
+
